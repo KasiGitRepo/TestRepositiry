@@ -2,7 +2,7 @@
  * @description       :
  * @author            : Kasi Jangiti
  * @group             :
- * @last modified on  : 10-31-2023
+ * @last modified on  : 12-20-2023
  * @last modified by  : Kasi Jangiti
  **/
 public with sharing class AccTriggerHandler {
@@ -27,6 +27,7 @@ public with sharing class AccTriggerHandler {
 		List<Opportunity> opportunitiesToDelete = new List<Opportunity>();
 		if (!accMap.isEmpty()) {
 			
+			//Fetch the contacts from Map
 			List<Contact> contactList = [SELECT Id, AccountId, Donot_Contact__c FROM Contact 
                                             WHERE AccountId IN :accMap.keySet()];
 			
