@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>59.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>varStageName</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>StageName</picklistField>
+        <picklistObject>Opportunity</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>SF : LWC : Add toast message to flow from LWC {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SF : LWC : Add toast message to flow from LWC</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Opportunity</name>
+        <label>Create Opportunity</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <faultConnector>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Amount</field>
+            <value>
+                <elementReference>Amount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>Close_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Opportunity_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <elementReference>Stage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>440</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>FaultMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(231, 18, 18);&quot;&gt;{!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Opportunity_Record_Screen</name>
+        <label>Opportunity Record Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Opportunity</targetReference>
+        </connector>
+        <fields>
+            <name>Opportunity_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Opportunity Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Close_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>Close Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Stage</name>
+            <choiceReferences>varStageName</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Stage</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Amount</name>
+            <dataType>Currency</dataType>
+            <fieldText>Amount</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Opportunity_Record_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

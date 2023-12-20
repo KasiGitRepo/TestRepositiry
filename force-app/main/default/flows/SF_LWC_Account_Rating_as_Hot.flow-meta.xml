@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>SF : LWC : Account Rating as Hot {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SF : LWC : Account Rating as Hot</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Account_Rating_is_Hot</name>
+        <label>Account Rating is Hot</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Account_Rating</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>varRating</elementReference>
+            </defaultValue>
+            <fieldText>Account Rating</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Account_Ratings</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(16, 36, 179);&quot;&gt;Account Rating:&lt;/strong&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; Your Account Rating is Updated to &lt;/span&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(12, 199, 19);&quot;&gt;{!varRating}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_Rating_is_Hot</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varRating</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

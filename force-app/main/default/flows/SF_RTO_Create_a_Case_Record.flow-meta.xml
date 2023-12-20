@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>59.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>caseOrigin</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Origin</picklistField>
+        <picklistObject>Case</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>caseReason</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Reason</picklistField>
+        <picklistObject>Case</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>caseStatus</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Status</picklistField>
+        <picklistObject>Case</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>SF : RTO : Create a Case Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SF : RTO : Create a Case Record</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_a_Case</name>
+        <label>Create a Case</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <connector>
+            <targetReference>Success_Screen</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Handle_Errors</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>varAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Origin</field>
+            <value>
+                <elementReference>Case_Origin</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <elementReference>Case_Reason</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <elementReference>Case_Status</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>Subject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <screens>
+        <name>Case_Screen</name>
+        <label>Case Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_a_Case</targetReference>
+        </connector>
+        <fields>
+            <name>Case_Scetion</name>
+            <fieldText>Case Scetion</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Case_Scetion_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Case_Status</name>
+                    <choiceReferences>caseStatus</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Case Status</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <fields>
+                    <name>Case_Reason</name>
+                    <choiceReferences>caseReason</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Case Reason</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Case_Scetion_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Case_Origin</name>
+                    <choiceReferences>caseOrigin</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Case Origin</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <fields>
+                    <name>Subject</name>
+                    <dataType>String</dataType>
+                    <fieldText>Subject</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Screen</name>
+        <label>Success Screen</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Success_Message</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(20, 123, 192); font-size: 16px;&quot;&gt;Case Record Created Successfully&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(20, 123, 192); font-size: 16px;&quot;&gt;Case Record Id : {!Create_a_Case}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Handle_Errors</name>
+        <label>Handle Errors</label>
+        <locationX>440</locationX>
+        <locationY>350</locationY>
+        <flowName>SF_Sub_Flow_Error_Handling</flowName>
+    </subflows>
+    <variables>
+        <name>varAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
