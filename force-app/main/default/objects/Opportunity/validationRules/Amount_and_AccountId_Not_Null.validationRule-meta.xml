@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_and_AccountId_Not_Null</fullName>
+    <active>false</active>
+    <description>Amount_and_AccountId_Not_Null</description>
+    <errorConditionFormula>OR ( $Setup.By_Pass_Elements__c.Bypass_Validations__c,
+						  ISBLANK(Amount),  ISBLANK(AccountId)
+					)</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>AccountId and Amount Should not be null</errorMessage>
+</ValidationRule>

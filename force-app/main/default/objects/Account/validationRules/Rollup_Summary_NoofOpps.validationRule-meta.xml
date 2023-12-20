@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rollup_Summary_NoofOpps</fullName>
+    <active>false</active>
+    <errorConditionFormula>No_of_Opps__c &gt; 1</errorConditionFormula>
+    <errorMessage>You cannot create more than one Opportnity record</errorMessage>
+</ValidationRule>
