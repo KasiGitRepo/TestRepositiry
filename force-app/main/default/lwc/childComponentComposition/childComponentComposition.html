@@ -6,10 +6,9 @@
   @last modified by  : Kasi Jangiti
 -->
 <template>
-  <p class="slds-var-p-around_small">I am Child Component</p>
-  <!-- Handling the event in the parent component, shadow bounday crossed-->
-  <div oncustomeventfire={grandChildHandleratDiv}>
-    <!-- Handling the custom event in the parent component with in the component(with shadow boundary)-->
-    <c-grand-child-composition oncustomeventfire={grandChildHandler}></c-grand-child-composition>
+  <p>I am Child Component</p>
+  <div class="slds-var-p-around_small">
+    <lightning-button label="Fire Event" variant="brand" onclick={fireHandler}>
+    </lightning-button>
   </div>
 </template>

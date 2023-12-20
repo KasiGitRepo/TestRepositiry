@@ -9,13 +9,11 @@ import { LightningElement } from 'lwc';
 
 export default class ChildComponentComposition extends LightningElement {
 
-    // Event Handler to handle custom event with in the shadow boundary
-    grandChildHandler() {
-        console.log('Child Event Handler at Grand-Child level with in the component');
-    }
+    fireHandler(event) {
+        const myCustomEVent = new CustomEvent("customeventfire", {
 
-    // Event Handler to handle custom event with in child component but outside the shadow boundary
-    grandChildHandleratDiv() {
-        console.log('Child Event Handler at Grand-Child level with in the component at Div tag');
+        });
+
+        this.dispatchEvent(myCustomEVent);
     }
 }

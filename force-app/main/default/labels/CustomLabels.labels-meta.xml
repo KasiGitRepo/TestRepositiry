@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Base_box</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Base box</shortDescription>
+        <value>&lt;div class=&quot;slds-box&quot;&gt;
+&lt;p&gt;This is a regular-sized box.&lt;/p&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Blue_Button</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Blue Button</shortDescription>
+        <value>&lt;button class=&quot;slds-button slds-button_brand&quot;&gt;Brand Button&lt;/button&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Box_with_Texture</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Box with Texture</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-theme_shade slds-theme_alert-texture&quot;&gt;
+ This is a box with texture
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Box_with_theme</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Box with theme</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-theme_shade&quot;&gt;
+strong&gt;Box With Theme &lt;/strong&gt; with shaded theme
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Header</fullName>
+        <categories>Custom header</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Header</shortDescription>
+        <value>&lt;div class=&quot;slds-section slds-is-open&quot;&gt;
+&lt;h3 class=&quot;slds-section__title slds-theme_shade&quot;&gt;
+&lt;span class=&quot;slds-truncate slds-p-horizontal_small&quot; title=&quot;Section Title&quot;&gt;Section Title&lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class=&quot;slds-section__content&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Dark_Theme_Notification</fullName>
+        <categories>Notification</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dark Theme Notification</shortDescription>
+        <value>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-scoped-notification_dark&quot; role=&quot;status&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Default_bage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default bage</shortDescription>
+        <value>&lt;span class=&quot;slds-badge&quot;&gt;Default Badge&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Disabled_Button</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Disabled Button</shortDescription>
+        <value>&lt;button class=&quot;slds-button slds-button_neutral&quot; disabled=&quot;&quot;&gt;Neutral Button&lt;/button&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Error_Notification</fullName>
+        <categories>Notification</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Notification</shortDescription>
+        <value>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_error&quot; role=&quot;status&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Error_badge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error badge</shortDescription>
+        <value>&lt;span class=&quot;slds-badge slds-theme_error&quot;&gt; Error Badge&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Extra_Small_box</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Extra Small box</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-box_x-small&quot;&gt;
+&lt;p&gt;This is an extra-small box.&lt;/p&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Green_Button</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Green Button</shortDescription>
+        <value>&lt;button class=&quot;slds-button slds-button_success&quot;&gt;Success Button&lt;/button&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Informational_Notification</fullName>
+        <categories>Notification</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Informational Notification</shortDescription>
+        <value>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_info&quot; role=&quot;status&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Inverse_Button</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inverse Button</shortDescription>
+        <value>&lt;div style=&quot;background-color:#16325c;padding:0.5rem&quot;&gt;
+&lt;button class=&quot;slds-button slds-button_inverse&quot;&gt;Inverse Button&lt;/button&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Inverse_badge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inverse badge</shortDescription>
+        <value>&lt;span class=&quot;slds-badge slds-badge_inverse&quot;&gt;Inverse Badgel&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Lightest_bage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lightest bage</shortDescription>
+        <value>&lt;span class=&quot;slds-badge_lightest&quot;&gt;Lightest Badge&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Red_Button</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Red Button</shortDescription>
+        <value>&lt;button class=&quot;slds-button slds-button_destructive&quot;&gt;Destructive Button&lt;/button&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Success_Alert</fullName>
+        <categories>Alert</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Alert</shortDescription>
+        <value>&lt;div class=&quot;slds-notify slds-notify_alert slds-alert_error&quot; role=&quot;alert&quot;&gt;
+ &lt;span class=&quot;slds-assistive-text&quot;&gt;error&lt;/span&gt;
+  &lt;span class=&quot;slds-icon_container slds-icon-utility-error slds-m-right_x-small&quot; title=&quot;Description of icon when needed&quot;&gt;
+    &lt;svg class=&quot;slds-icon slds-icon_x-small&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;use xlink:href=&quot;/assets/icons/utility-sprite/svg/symbols.svg#error&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Success_Notification</fullName>
+        <categories>Notification</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success Notification</shortDescription>
+        <value>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_success&quot; role=&quot;status&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Success_badge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success badge</shortDescription>
+        <value>&lt;span class=&quot;slds-badge slds-theme_success&quot;&gt;Success badge&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Warning_Alert</fullName>
+        <categories>Alert</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning Alert</shortDescription>
+        <value>&lt;div class=&quot;slds-notify slds-notify_alert slds-alert_warning&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;slds-icon_container slds-icon-utility-warning slds-m-right_x-small&quot; title=&quot;Description of icon when needed&quot;&gt;
+    &lt;svg class=&quot;slds-icon slds-icon_x-small&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;use xlink:href=&quot;/assets/icons/utility-sprite/svg/symbols.svg#warning&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Warning_Notification</fullName>
+        <categories>Notification</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning Notification</shortDescription>
+        <value>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_warning&quot; role=&quot;status&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Warning_badge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning badge</shortDescription>
+        <value>&lt;span class=&quot;slds-badge slds-theme_warning&quot;&gt;Warning Badge&lt;/span&gt;</value>
+    </labels>
+</CustomLabels>
