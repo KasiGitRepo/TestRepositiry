@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-12-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <div>What is your Name?</div>
+    <p><slot name="name"></slot></p>
+    <div>What is your Age?</div>
+    <slot name="age"></slot>
+    <div>Who is Developed?</div>
+    <slot name="develop"></slot>
+    <footer class="slds-card__footer slds-hide">
+        <slot name="footer" onslotchange={footerHandler}></slot>
+    </footer>
+</template>

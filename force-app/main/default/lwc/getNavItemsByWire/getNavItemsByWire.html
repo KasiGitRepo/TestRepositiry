@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Nav Items">
+        <div class="slds-p-around_x-small">
+            <template lwc:if={result}>
+                <p> Object Name : {result.objectApiName}</p>
+                <p> Page Reference : {result.pageReference.type}</p>
+                <p> Developer Name : {result.developerName}</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

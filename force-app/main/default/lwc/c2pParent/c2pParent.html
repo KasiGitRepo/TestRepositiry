@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-11-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Child to Parent with simple Event">
+        <div class="slds-p-around_small" onclick={parentDivHandler}>
+            <lightning-button label="Show Modal" onclick={handleClick}></lightning-button>
+            <h1>{message}</h1>
+            <h1>{event}</h1>
+            <h1>{component}</h1>
+            <template lwc:if={showModal}>
+                <c-c2p-modal-component onclose={closeHandler}></c-c2p-modal-component>
+            </template>      
+        </div>
+    </lightning-card>
+</template>

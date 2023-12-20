@@ -1,0 +1,15 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-07-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+  <p class="slds-var-p-around_small">I am Child Component</p>
+  <!-- Handling the event in the parent component, shadow bounday crossed-->
+  <div oncustomeventfire={grandChildHandleratDiv}>
+    <!-- Handling the custom event in the parent component with in the component(with shadow boundary)-->
+    <c-grand-child-composition oncustomeventfire={grandChildHandler}></c-grand-child-composition>
+  </div>
+</template>

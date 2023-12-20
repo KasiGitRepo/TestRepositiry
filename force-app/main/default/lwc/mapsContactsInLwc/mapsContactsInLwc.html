@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Opportunities Map">
+        <div class="slds-p-around_x-small">
+            <template lwc:if={mapMarkers.length}>
+                <lightning-map map-markers={mapMarkers} markers-title={markersTitle}
+                    onmarkerselect={contactSelectHandler} selected-marker-value={selectedMarker}>
+                </lightning-map>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-05-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Call Imperative Apex" icon-name="custom:custom14">
+        <div class="slds-grid slds-gutters">
+
+            <div class="slds-col">
+                <template lwc:if={industryPicklist.data}>
+                    <lightning-combobox label="Industry" placeholder="Select Industry"
+                        options={industryPicklist.data.values} onchange={handleChange}></lightning-combobox>
+                </template>
+            </div>
+
+            <div class="slds-col">
+                <lightning-button label="Call Apex Method" variant="brand" onclick={apexHandler}>
+                </lightning-button>
+            </div>
+        </div>
+        <div class="slds-var-p-around_small">
+            <tempate lwc:if={data}>
+                <lightning-datatable key-field="id" data={data} columns={columns}>
+                </lightning-datatable>
+            </tempate>
+        </div>
+    </lightning-card>
+</template>

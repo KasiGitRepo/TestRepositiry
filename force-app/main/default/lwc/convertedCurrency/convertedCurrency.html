@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-27-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Currency Covertor" icon-name="custom:custom14">
+        <!--Take the input amount from the user-->
+        <div class="formatfile slds-var-p-around_small">
+            <lightning-input label="Enter Amount" onchange={changeHandler} name="amount">
+            </lightning-input>
+        </div>
+
+        <!-- From currency and To currency-->
+        <div class="formatfile slds-var-p-around_small">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-combobox name="fromCurr" label="From Currency" options={currencyoptions}
+                        onchange={changeHandler}></lightning-combobox>
+                </div>
+                <div class="slds-col">
+                    <lightning-combobox name="toCurr" label="To Currency" options={currencyoptions}
+                        onchange={changeHandler}></lightning-combobox>
+                </div>
+            </div>
+        </div>
+
+        <!-- Convert currency button-->
+        <div class="formatfile slds-var-p-around_small">
+            <lightning-button label="Convertor" variant="brand" onclick={clickHandler}>
+            </lightning-button>
+        </div>
+        <!-- Converted Amount-->
+        <div class="formatfile slds-var-p-around_small">
+            <template lwc:if={showOutput}>
+                <p>Converted Amount :</p>
+                <p><lightning-formatted-number format-style="currency" currency-code={toCurr} value={convertedValue}
+                        currency-display-as="name"></lightning-formatted-number></p>
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

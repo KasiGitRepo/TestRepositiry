@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Create Record by Wire Adapter">
+        <div class="slds-p-around_x-small">
+            <form class="formCreator">
+                <lightning-input type="text" label="FirstName" name="FirstName" variant="label-inline"
+                    onchange={chagneHandler} class="slds-p-around_xx-small">
+                </lightning-input>
+                <lightning-input type="text" label="LastName" name="LastName" variant="label-inline"
+                    onchange={chagneHandler} class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="email" label="Email" variant="label-inline" name="Email" onchange={chagneHandler}
+                    class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="tel" label="Phone" name="Phone" variant="label-inline" onchange={chagneHandler}
+                    class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="text" label="Title" name="Title" variant="label-inline" onchange={chagneHandler}
+                    class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-button label="Create Contact" variant="brand" onclick={handleClick}>
+                </lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

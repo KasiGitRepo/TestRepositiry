@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <div class="slds-var-p-around_small">
+        <template lwc:if={oppRec}>
+            <lightning-datatable key-field="Id" data={oppRec} columns={columns}>
+            </lightning-datatable>
+            <!--
+            <div class="slds-var-p-around_x-small">
+                <p>
+                    Opportunity Name : {oppRec.Name}
+                </p>
+                <p>
+                    Opportunity StageName : {oppRec.StageName}
+                </p>
+                <p>
+                    Opportunity CloseDate : {oppRec.CloseDate}
+                </p>
+                <p>
+                    Opportunity Amount : {oppRec.Amount}
+                </p>
+                <p>
+                    Opportunity LeadSource : {oppRec.LeadSource}
+                </p>
+            </div>
+            -->
+        </template>
+    </div>
+</template>

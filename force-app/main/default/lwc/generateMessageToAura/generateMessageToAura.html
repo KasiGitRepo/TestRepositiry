@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Generate Message To Aura" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <lightning-input label="Enter First Name" name="fname" onchange={changeHandler}>
+            </lightning-input>
+            <lightning-input label="Enter Last Name" name="lname" onchange={changeHandler}>
+            </lightning-input>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-button label="Generate Full Name" variant="brand" onclick={clickHandler}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

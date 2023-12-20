@@ -1,0 +1,17 @@
+/* from tag*/
+
+/* from classes*/
+.name {
+    color: greenyellow;
+    font-size: 40px;
+    border-color: red;
+    border-width: 10px;
+}
+
+/*Pseudo Classes (When you hover the mouse on the text it will display)*/
+.name:hover {
+    color: goldenrod;
+    font-size: 100px;
+    border-color: yellow;
+    border-width: 30px;
+}

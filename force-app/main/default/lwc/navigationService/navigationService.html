@@ -1,0 +1,53 @@
+<!--
+
+     Types of Navigation :
+    ---------------------
+     1.Navigate to Home page
+     2.Navigate to Chatter
+     3.Navigate to New Record
+     4.Navigate to New Record with default values
+     5.Navigate to Listview
+     6.Navigate to Files
+     7.Navigate to Record page with view and edit mode
+     8.Navigate to Tab
+     9.Navigate to Record relationship page
+     10.Navigate to External web page
+     11.Navigate to LWC Component
+     12.Navigate to Aura Component
+     13.Navigate to VF Pages
+     14.Fetch current page reference
+
+    Steps to use Navigation Service:
+    --------------------------------
+     1.In the component's Javascript class, import the lightning/navigation module
+       import { NavigationMixin } from 'lightning/navigation';
+     2.Apply the NavigationMixin function to your component's base class
+       export default class MyCustomElement extends NavigationMixin (LightningElement){}
+     3.To dispatch the navigation request, call the navigation service's
+        [NavigationMixin.Navigate](pageReference,[replace])
+      pageReference : It is an object that defines the page
+      replace :  It is a boolean value which is false by deafult.
+                 If this value is true it pageReference replaces the existing entry in the browser history.
+
+    PageReference Types :
+    ---------------------
+      To navigate in Lightning Experience, Lightning communities, or the Salesforce mobile app, define a pageReference object.
+    
+    The following pageReferences are supported
+     1.App
+     2.Lightning Component
+     3.knowledge Article
+     4.Login Page
+     5.Names Page(communities)
+     6.Named Page(standard)
+     7.Navigation item page
+     8.Object Page
+     9.Record Page
+     10.Record relationship Page
+     11.Web Page
+     
+-->
+
+<template>
+
+</template>

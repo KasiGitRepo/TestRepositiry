@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-26-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Date Validation">
+        <div class="slds-p-around_small">
+            <lightning-input type="date" label="Start Date" name="startDate" onkeyup={dateHandler}
+                class="slds-p-around_small"></lightning-input>
+            <lightning-input type="date" label="End Date" name="endDate" onkeyup={dateHandler}
+                class="slds-p-around_small"></lightning-input>
+            <template lwc:if={success}>
+                <p class="slds-text-color_success">{success}</p>
+            </template>
+
+            <template lwc:else>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+
+            <lightning-button label="Date Validation" variant="brand" onclick={handleDate}
+                class="slds-p-around_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

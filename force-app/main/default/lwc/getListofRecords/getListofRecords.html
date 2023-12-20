@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Contacts List View" icon-name="standard:contact">
+        <div class="slds-p-around_x-small">
+            <!-- Display when the data is available-->
+            <template lwc:if={contacts}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Iterate the contacts array -->
+                        <template for:each={contacts} for:item="contact">
+                            <tr key={contact.fields.Id.value}>
+                                <td>{contact.fields.Name.value}</td>
+                                <td>{contact.fields.Email.value}</td>
+                                <td>{contact.fields.Phone.value}</td>
+                                <td>{contact.fields.Title.value}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+                <!-- Create buttons two control the pagination-->
+                    <div class="slds-p-around_small">
+                        <lightning-button 
+                           label="Previous" 
+                           variant="brand"
+                           onclick={handlePreviousPage} 
+                           class="slds-p-around_x-small">
+                        </lightning-button>
+                       
+                        <lightning-button 
+                           label="Next" 
+                           variant="brand" 
+                           onclick={handleNextPage} 
+                           class="slds-p-around_x-small">
+                        </lightning-button>                   
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

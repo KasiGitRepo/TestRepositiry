@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-19-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Fetch User Details with Wire Service as function">
+        <div class="slds-p-around_x-small">
+            <strong>User Id</strong> : {userId}
+            <template lwc:if={userDetails}>
+                <div> <strong>User Name</strong>  : {userDetails.Name.value}</div>
+                <div> <strong>User Email</strong> : {userDetails.Email.value}</div>
+                <div> <strong>User Phone</strong> : {userDetails.Phone.value}</div>
+                <div> <strong>User Title</strong> : {userDetails.Title.value}</div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Fetch User Details with Wire Service as property">
+        <div class="slds-p-around_x-small">
+            <strong>User Id</strong> : {userId}
+            <template lwc:if={userdetailsProeprty.data}>
+                <div> <strong>User Name</strong>  : {userdetailsProeprty.data.fields.Name.value}</div>
+                <div> <strong>User Email</strong> : {userdetailsProeprty.data.fields.Email.value}</div>
+                <div> <strong>User Phone</strong> : {userdetailsProeprty.data.fields.Phone.value}</div>
+                <div> <strong>User Title</strong> : {userdetailsProeprty.data.fields.Title.value}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

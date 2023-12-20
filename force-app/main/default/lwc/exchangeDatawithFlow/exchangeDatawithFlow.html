@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-13-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Exchange data from LWC to Flow">
+        <lightning-flow flow-api-name="SF_LWC_Exchange_the_data_between_LWC_and_Screen_flow"
+            flow-input-variables={flowInputVariables} onstatuschange={statusChangeHandler}>
+        </lightning-flow>
+        <div class="slds-var-p-around_small"> <strong>Display output from LWC</strong>
+            <p class="slds-var-p-bottom_small">Account Id : {accountId}</p>
+            <p class="slds-var-p-bottom_small">Operation Type : {opType}</p>
+            <p class="slds-var-p-bottom_small">Operation Date : {opDate}</p>
+        </div>
+    </lightning-card>
+</template>

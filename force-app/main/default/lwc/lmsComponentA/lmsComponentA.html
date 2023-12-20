@@ -1,0 +1,44 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-15-2023
+  @last modified by  : Kasi Jangiti
+-->
+<!--
+    Steps to follow :
+    -----------------
+    1.Reference a message channel in LWC
+       import SAMPLEMC from '@salesforce/messageChannel/SampleMessageChannel__c'
+    2.Import LMS API
+       import {publish, MessageContext, publish, subscribe,unsubscribe, APPLICATION_SCOPE}
+    3.MessageContext wire adaptor is used to get information of all LWC using LMS
+       @wire(MessageContext)
+       context;
+    4.Publish a Message
+      //publish(messageContext, messageChannel, message)
+       publish(context, SAMPLEMC, message)
+      // this context is the MessageContext object
+      //SAMPLEMC is the reference of the MessageChannel
+      //message is the data to publish
+    5.Subscribe a Message Channel to receive the message
+      //subscribe(messageContext, messageChannel, listener, subscriberOptions)
+      this.subscription = subscribe(context, SAMPLEMC, (message)=> {this.handleMessage(message)}, {scope:APPLICATION_SCOPE})
+      //this context is the context of the current lightning web component using LMS
+      //SAMPLEMC is the reference of the MessageChannel
+      //listener is a function to receive messages on message channel from anywhere in the application
+      //pass the subscriberOptions parameters as {scope : APPLICATION_SCOPE}
+    6.Unsubscribe to a message channel
+      unsubscribe(this.subscription)
+      this.subscription=null
+-->
+<template>
+    <lightning-card title="LWC LMS Component A">
+        <div class="slds-p-around_small">
+            <lightning-input type="text" label="Enter Value for Publish" onkeyup={inputHandler}></lightning-input>
+        </div>
+        <div class="slds-p-around_small">
+            <lightning-button label="Publish" variant="brand" onclick={handlePublish}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Create Opportunity Record by Wire Adapter">
+        <div class="slds-p-around_x-small">
+            <form class="formCreator">
+                <lightning-input type="text" label="Name" name="Name" variant="label-inline"
+                    onchange={chagneHandler} class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="text" label="StageName" name="StageName" variant="label-inline"
+                    onchange={chagneHandler} class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="date" label="CloseDate" variant="label-inline" name="CloseDate" onchange={chagneHandler}
+                    class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-input type="number" label="Amount" name="Amount" variant="label-inline" onchange={chagneHandler}
+                    class="slds-p-around_xx-small">
+                </lightning-input>
+
+                <lightning-button label="Create Opportunity" variant="brand" onclick={handleClick}>
+                </lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

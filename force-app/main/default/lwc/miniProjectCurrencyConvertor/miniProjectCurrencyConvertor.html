@@ -1,0 +1,49 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-27-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Currency Convertor" icon-name="custom:custom17">
+        <!--Input field to enter the amount for conversion-->
+        <div class="formatplace slds-var-p-around_small">
+            <lightning-input name="amount" label="Enter Amount" onchange={changeHandler} placeholder="Enter the Amount">
+            </lightning-input>
+        </div>
+
+        <!--From Currency to To Currency-->
+        <div class="formatplace slds-var-p-around_small">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-combobox name="fromCurr" label="From Currency" options={currencyOptions}
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-combobox name="toCurr" label="To Currency" options={currencyOptions}
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <!--Convert currency-->
+        <div class="formatplace slds-var-p-around_small">
+            <lightning-button label="Convert" variant="brand" onclick={conversionHandler}>
+            </lightning-button>
+        </div>
+
+        <!--Display output-->
+        <div class="formatplace slds-var-p-around_small">
+            <template lwc:if={displayOutput}>
+                <p> Converted Amount :</p>
+                <p>
+                    <lightning-formatted-number value={convertedAmount} format-style="currency" currency-code={toCurr}
+                        currency-display-as="name"></lightning-formatted-number>
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

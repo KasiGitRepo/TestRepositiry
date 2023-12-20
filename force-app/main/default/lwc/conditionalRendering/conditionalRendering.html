@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-08-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-m-around_small">
+            <lightning-button variant="brand" label="Show Data" title="Show" onclick={changeHandler}>
+            </lightning-button>
+
+            <template lwc:if={isVisible}>
+                <div> Lightning Web Component Series lectures</div> <br />
+                <lightning-input type="text" label="Enter Name"></lightning-input>
+                <lightning-input type="text" label="Enter Age"></lightning-input> <br />
+                <lightning-button variant="brand" label="Condition" title="Show" onclick={changeHandler}>
+                </lightning-button>
+            </template>
+
+            <template lwc:else>
+                <div>Once you click the button you can see the Data</div>
+            </template>
+
+            <!--Check the validation with user input text-->
+            <lightning-input type="text" label="Enter Name" onchange={ChangeHandlerInput}></lightning-input>
+
+            <template lwc:if={ChangeInput}>
+                <div>You have enter the correct data in the input field</div>
+            </template>
+
+            <template lwc:else>
+                <div>Please enter the correct data in the input field</div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

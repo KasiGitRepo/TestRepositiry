@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-01-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="First LWC Component">
+        <div class="slds-m-around_small">
+            <div> Hello India</div>
+            <div> My fullname is <b>{fullname}</b> and designation is <b>{designation} </b> </div>
+            <lightning-input type="text" label="Fullname" onchange={changeHandler}></lightning-input>
+            <lightning-input type="text" label="Designation" onchange={changeDesi}></lightning-input>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="@track properties">
+        <div class="slds-m-around_small">
+            <div> Hello India</div>
+            <div> My City is <b>{address.city}</b> and State is <b>{address.state} </b> </div>
+            <lightning-input type="text" label="City" onchange={changeHandler}></lightning-input>
+            <lightning-input type="text" label="State" onchange={changeDesi}></lightning-input>
+        </div>
+    </lightning-card>
+    
+    <lightning-card title="Getter Function">
+        <div class="slds-m-around_small">
+            <div> First city of the State is {firstCity}</div>
+            <div> The division of {num1} and {num2} is {Division} </div>
+        </div>
+    </lightning-card>
+   
+</template>

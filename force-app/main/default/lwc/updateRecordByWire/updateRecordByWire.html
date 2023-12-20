@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-24-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Update Record by Wire" icon-name="standard:opportunity">
+        <div class="slds-p-around_x-small">
+            <lightning-datatable key-field="Id" data={opportunities} columns={columns} onsave={handleSave}
+                draft-values={draftValues}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

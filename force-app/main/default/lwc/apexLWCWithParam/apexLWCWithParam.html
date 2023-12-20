@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Fetch Accounts by Industry" icon-name="standard:account">
+        <div class="slds-p-around_x-small">
+            <lightning-combobox 
+                label="Account Industry"
+                name="Account Industry"
+                value={selectedIndustry}
+                options={industryOptions}
+                onchange={handleIndustry}>
+            </lightning-combobox>
+            <template lwc:if={accountIndustry.data}>
+                <template for:each={accountIndustry.data} for:item="account">
+                    <div key={account.Id} class="slds-box slds-box-x-small">
+                        <div><strong>Account Name : </strong> {account.Name}</div>
+                        <div><strong>Account Phone: </strong> {account.Phone}</div>
+                        <div><strong>Account Industry : </strong> {account.Industry}</div>
+                        <div><strong>Account Rating</strong> : {account.Rating}</div>
+                        <div><strong>Annaul Revenue</strong> : {account.AnnualRevenue}</div>
+                        <div><strong>Account Type</strong> : {account.Type}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

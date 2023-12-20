@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-27-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Download Data in CSV Format" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <lightning-button label="Export data" icon-name="utility:download" variant="brand" onclick={exportHandler}
+                disabled={checkRecord}>
+            </lightning-button>
+        </div>
+        <div class="slds-var-p-around_small">
+            <template lwc:if={accounts}>
+                <lightning-datatable key-field="id" data={accounts} columns={columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

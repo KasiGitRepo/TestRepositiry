@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Dynamic CSS" icon-name="custom:custom14">
+        <div class="slds-p-around_x-small">
+            <p class={pClass}> Welcome to Lightning Web Component Bootcamp with Ankit Jain</p>
+            <div class="slds-p-around_small">
+                <lightning-button label="Add CSS" variant="brand" onclick={addHandler}
+                    class="slds-p-left_x-small"></lightning-button>
+                <lightning-button label="Remove CSS" variant="brand" onclick={removeHandler}
+                    class="slds-p-left_x-small"></lightning-button>
+                <lightning-button label="Toggle CSS" variant="brand" onclick={toggleHandler}
+                    class="slds-p-left_x-small"></lightning-button>
+            </div>
+
+            <div class="slds-p-around_small">
+
+                <lightning-input type="checkbox" label="Display Data" onchange={handleCheckbox}
+                    class="slds-p-around_x-small">
+                </lightning-input>
+                <template lwc:if={showMessage}>
+                    <p class="slds-p-around_small cssStyle"> <strong> Salesforce Certified Platform Developer-1
+                        </strong></p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

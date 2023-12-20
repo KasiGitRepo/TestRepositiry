@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-13-2023
+  @last modified by  : Kasi Jangiti
+-->
+<aura:component implements="flexipage:availableforAllPageTypes">
+    <lightning:card title="Aura and LWC CoExistance" iconName="custom:custom14">
+        <!-- Calling Child(LWC) component into Aura-->
+        <!-- We use aura:id to find the method from LWC component-->
+        <c:childLWCcomponent aura:id="childLWC" message="Welcome to Trailhed">
+        </c:childLWCcomponent>
+        <div class="slds-var-p-around_x-small">
+            <lightning:button label="Invoke LWC Child" variant="brand" onclick="{!c.handleClick}" />
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-16-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Toast Message Event">
+        <div class="slds-p-around_x-small">
+            <lightning-button label="Success" class="slds-p-around_x-small" variant="success"
+                onclick={successHandler}></lightning-button>
+            <lightning-button label="Warning" class="slds-p-around_x-small" variant="brand"
+                onclick={warningHandler}></lightning-button>
+            <lightning-button label="Information" class="slds-p-around_x-small" variant="base"
+                onclick={infoHandler}></lightning-button>
+            <lightning-button label="Error" class="slds-p-around_x-small" variant="destructive"
+                onclick={errorHandler}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+.text-CSS{
+    background-color: brown;
+    border: 5px solid blue;
+}
+
+.dynamicCSS{
+    background-color: yellowgreen;
+    border: 5px solid red;   
+}
+
+.cssStyle{
+    font-size: 20px;
+    color: yellowgreen;
+}

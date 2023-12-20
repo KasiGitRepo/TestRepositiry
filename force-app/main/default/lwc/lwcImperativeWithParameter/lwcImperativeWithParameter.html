@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Opp Records by Imperative with Parameter" icon-name="standard:opportunity">
+      <lightning-input class="slds-m-around_x-small" type="search" label="Serch Key" placeholder="Enter Serachkey to get the Opportunity Records"
+      variant="label-inline" onchange={searchHandler}></lightning-input>
+        <div class="slds-p-around_x-small">
+            <template lwc:if={opps}>
+                <template for:each={opps} for:item="opp">
+                    <div key={opp.Id} class="slds-p-around_x-small slds-box slds-box_x-small">
+                        <p>Account Name : {opp.Account.Name}</p>
+                        <p>Opportunity Name : {opp.Name}</p>
+                        <p>Opportunity StageName : {opp.StageName}</p>
+                        <p>Opportunity Close Date : {opp.CloseDate}</p>
+                        <p>Opportunity Type : {opp.Type}</p>
+                        <p>Opportunity Amount : {opp.Amount}</p> 
+                    </div>
+                </template>
+            </template>
+            <lightning-button class="slds-p-around_x-small" label="Get Opps" variant="brand" onclick={handleOpps}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

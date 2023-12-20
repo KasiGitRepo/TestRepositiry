@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-07-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Event bubbling and composing Demo">
+        <p class="slds-var-p-around_small">I am Grand-Grand Parent Component</p>
+        <!-- Handling grand-child at Grand-grand parent outside the shadow boundary-->
+        <div oncustomeventfire={childEventHandleratGrandGrandParentDiv}>
+
+            <!-- Handling grand-child at Grand-grand parent with in the component within the shadow boundary-->
+            <c-grand-parent-composition
+                oncustomeventfire={childEventHandleratGrandGrandParent}></c-grand-parent-composition>
+        </div>
+    </lightning-card>
+</template>

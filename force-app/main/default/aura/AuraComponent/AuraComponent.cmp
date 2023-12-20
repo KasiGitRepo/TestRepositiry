@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="messageInfo" type="String"/>
+  <lightning:card title="Aura to LWC Communication">
+      <div class="slds-p-around_small"> 
+      Message : {!v.messageInfo}
+      </div>
+      <div class="slds-p-around_small">
+        <c:lwcComponent onsenddata="{!c.handleData}" message="Passing data from Aura Component"></c:lwcComponent>
+      </div>
+  </lightning:card>
+</aura:component>	

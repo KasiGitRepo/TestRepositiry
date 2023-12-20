@@ -1,0 +1,64 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-21-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Multiple picklist Values">
+        <div class="slds-p-around_x-small">
+            <!-- When the industryOptions available display the combobox-->
+            <template lwc:if={industryOptions}>
+                <lightning-combobox 
+                     name="Account Industry" 
+                     label="Account Industry" 
+                     value={selectedIndustry}
+                     options={industryOptions} 
+                     placeholder="Select Industry" 
+                     onchange={handleChange}>
+                </lightning-combobox>
+                <p> <strong>Selected Industry is :</strong> {selectedIndustry}</p>
+            </template>
+
+            <!-- When the ratingOptions available display the combobox-->
+            <template lwc:if={ratingOptions}>
+                <lightning-combobox 
+                     name="Account Rating" 
+                     label="Account Rating" 
+                     value={selectedRating}
+                     options={ratingOptions} 
+                     placeholder="Select Rating" 
+                     onchange={handleChange}>
+                </lightning-combobox>
+                <p> <strong>Selected Rating is :</strong> {selectedRating}</p>
+            </template>
+
+              <!-- When the typeOptions available display the combobox-->
+              <template lwc:if={typeOptions}>
+                <lightning-combobox 
+                     name="Account Type" 
+                     label="Account Type" 
+                     value={selectedType}
+                     options={typeOptions} 
+                     placeholder="Select Type" 
+                     onchange={handleChange}>
+                </lightning-combobox>
+                <p> <strong>Selected Type is :</strong> {selectedType}</p>
+            </template>
+
+              <!-- When the sourceOptions available display the combobox-->
+              <template lwc:if={sourceOptions}>
+                <lightning-combobox 
+                     name="Account Source" 
+                     label="Account Source" 
+                     value={selectedSource}
+                     options={sourceOptions} 
+                     placeholder="Select Source" 
+                     onchange={handleChange}>
+                </lightning-combobox>
+                <p> <strong>Selected Source is :</strong> {selectedSource}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Passing Contacts to Child from Parent" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <template lwc:if={contacts.data}>
+                <c-child-contact-display contact={contacts.data}></c-child-contact-display>
+            </template>
+        </div>
+    </lightning-card>
+</template>

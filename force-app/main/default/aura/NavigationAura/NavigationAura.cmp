@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-16-2023
+  @last modified by  : Kasi Jangiti
+-->
+<aura:component implements="flexipage:availableForAllPageTypes, lightning:isUrlAddressable" access="global">
+ <aura:attribute name="recordid" type="String"/>
+ <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+
+ <lightning:card title="Navigate to Aura Component">
+    <div class="slds-p-around_x-small">
+      <p>You were navigated to Aura Component from LWC. Record Id : {!v.recordid}</p>
+    </div>
+ </lightning:card>
+</aura:component>	

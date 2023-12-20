@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-24-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Delete Record by Wire" icon-name="standard:opportunity">
+        <div class="slds-p-around_x-small">
+            <lightning-input class="slds-m-around_xx-small" label="RecordId" name="RecordId"
+                placeholder="Enter RecordId" variant="label-inline" onchange={handleRecordId}>
+            </lightning-input>
+            <lightning-button label="Delete Record" class="slds-m-around_xx-small" variant="brand"
+                onclick={deleteHandler}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-21-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Single Picklist field values">
+        <div class="slds-p-around_x-small">
+            <!-- Industry Picklist-->
+            <lightning-combobox
+                 name="Account Industry" 
+                 label="Account Industry" 
+                 value={selectedIndustry} 
+                 placeholder="Select Industry"
+                 options={industryValues} 
+                 onchange={handleChange}>
+            </lightning-combobox>
+        <p><strong>Selected Industry is:</strong> {selectedIndustry}</p>
+           <!-- Ownership Picklist-->
+            <lightning-combobox
+               name="Account Ownership" 
+               label="Account Ownership" 
+               value={selectedOwnership} 
+               placeholder="Select Ownership"
+               options={ownershipValues} 
+               onchange={handleType}>
+             </lightning-combobox>
+       <p><strong>Selected Ownership is:</strong> {selectedOwnership}</p>
+            <!-- Rating Picklist-->
+            <lightning-combobox
+               name="Account Rating" 
+               label="Account Rating" 
+               value={selectedRating} 
+               placeholder="Select Rating"
+               options={ratingValues} 
+               onchange={handleRating}>
+            </lightning-combobox>
+       <p><strong>Selected Rating is:</strong> {selectedRating}</p>
+        </div>
+    </lightning-card>
+</template>

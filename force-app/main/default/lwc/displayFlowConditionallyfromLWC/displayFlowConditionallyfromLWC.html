@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-13-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+
+    <!-- If the Rating is Hot, call the below flow and pass the value to the variable-->
+    <template lwc:if={isAccountRatingHot}>
+        <lightning-flow flow-api-name="SF_LWC_Account_Rating_as_Hot" flow-input-variables={inputVariable}>
+        </lightning-flow>
+    </template>
+
+    <!-- If the Rating is Warm, call the below flow and pass the value to the variable-->
+    <template lwc:elseif={isAccountRatingWarm}>
+        <lightning-flow flow-api-name="SF_LWC_Account_Rating_as_Warm" flow-input-variables={inputVariable}>
+        </lightning-flow>
+    </template>
+
+    <!-- If the Rating is Cold, call the below flow and pass the value to the variable-->
+    <template lwc:elseif={isAccountRatingCold}>
+        <lightning-flow flow-api-name="SF_LWC_Account_Rating_as_Cold" flow-input-variables={inputVariable}>
+        </lightning-flow>
+    </template>
+
+</template>

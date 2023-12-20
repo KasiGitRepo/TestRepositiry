@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Child Component" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            Display Message : {message}
+        </div>
+        <div class="slds-var-p-around_small">
+            <template lwc:if={employee}>
+                <template for:each={employee} for:item="emp">
+                    <div key={emp.Id}>
+                        <lightning-layout multiple-rows="true">
+                            <lightning-layout-item size="6">
+                                <div class="slds-var-p-around_small">
+                                    <p> Name : {emp.name}</p>
+                                    <p> City : {emp.city}</p>
+                                    <p> Technology : {emp.technology}</p>
+                                    <p> Designation : {emp.designation}</p>
+                                    <p> Company : {emp.company}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

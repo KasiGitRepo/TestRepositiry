@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-07-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+  <p class="slds-var-p-around_small"> I am Parent Component</p>
+  <!--Handling the Grand-Child in the Parent Component outside the shadow boundary level-2-->
+  <div oncustomeventfire={childDivEventHandlerDiv}>
+
+    <!--Handling the Grand-Child in the Parent Component outside the shadow boundary level-1-->
+    <div oncustomeventfire={childDivEventHandler}>
+
+      <!--Handling the Grand-Child in the Parent Component with in the component  with in the shadow boundary-->
+      <c-child-component-composition oncustomeventfire={childEventHandler}></c-child-component-composition>
+    </div>
+  </div>
+</template>

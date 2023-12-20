@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-05-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <!--
+    <lightning-card title="Life Cycel Hooks">
+        <div class="slds-m-around_small">
+            <template lwc:if={isChildVisible}>
+                <c-life-cycle-child></c-life-cycle-child>
+            </template>
+        </div>
+        <template lwc:if={isChildVisible}>
+            <lightning-button label="Remove Child" title="Remove Child" variant="brand" class="slds-m-around_small"
+                onclick={changeHandler}></lightning-button>
+        </template>
+
+        <template lwc:else>
+            <lightning-button label="Show Child" title="Show Child" variant="brand" class="slds-m-around_small"
+                onclick={changeHandler}></lightning-button>
+        </template>
+    </lightning-card>
+    -->
+   <lightning-card title={message}>
+    <div class="slds-p-around_small">
+        <template lwc:if={showChild}>
+            <c-life-cycle-child onincreasecount={updateMessage} message="Hello LWC">      
+            </c-life-cycle-child>
+        </template>
+       <lightning-button label="Toggle Child" onclick={toggleChild}></lightning-button>
+    </div>
+   </lightning-card>
+</template>

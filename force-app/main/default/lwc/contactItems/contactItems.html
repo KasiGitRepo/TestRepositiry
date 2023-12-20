@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-19-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card>
+        <a href="#" onclick={handleClick}>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">
+                    <img src={contact.PhotoUrl} />
+                </lightning-layout-item>
+
+                <lightning-layout-item padding="around-small">
+                    {contact.Name}
+                </lightning-layout-item>
+            </lightning-layout>
+        </a>
+    </lightning-card>
+</template>

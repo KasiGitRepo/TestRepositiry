@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-08-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+  <lightning-card title="Conditional Rendering">
+    <div class="sdls-p-around_small">
+      <lightning-input type="checkbox" label="Show Message" onchange={changeHandler}
+        class="slds-p-left_small"></lightning-input>
+    </div>
+    <template lwc:if={displayMessage}>
+      <p class="slds-p-around_small"> Welcome to Lightning Web Components Bootcamp with Ankit Jain</p>
+    </template>
+    <template lwc:else>
+      <p class="slds-p-around_small"> Click on checkbox to see Message</p>
+    </template>
+  </lightning-card>
+</template>

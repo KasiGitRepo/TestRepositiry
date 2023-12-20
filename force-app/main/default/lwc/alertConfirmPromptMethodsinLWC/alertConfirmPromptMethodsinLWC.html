@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Alert Confirm Prompt" icon-name="custom:custom14">
+        <div>
+            <lightning-button label="Alert Me" variant="brand" onclick={alertHandler} class="slds-var-p-around_small">
+            </lightning-button>
+
+            <lightning-button label="Confirm Me" variant="brand" onclick={confirmHandler}
+                class="slds-var-p-around_small">
+            </lightning-button>
+
+            <lightning-button label="Prompt Me" variant="brand" onclick={promptHandler} class="slds-var-p-around_small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

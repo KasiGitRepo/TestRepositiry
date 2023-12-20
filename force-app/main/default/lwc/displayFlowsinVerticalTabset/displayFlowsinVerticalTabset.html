@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-13-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Display Flows in a vertical Tabset">
+        <lightning-tabset>
+            <lightning-tab label="Create Contact">
+                <lightning-flow flow-api-name="SF_LWC_Tabset_Create_a_Contact_Record"
+                    flow-input-variables={inputVariable} onstatuschange={statusChangeHandler}></lightning-flow>
+            </lightning-tab>
+            <lightning-tab label="Create Opportunity" title="2nd tab extended title">
+                <lightning-flow flow-api-name="Sf_LWC_Tabset_Create_Opportunity_Record"
+                    flow-input-variables={inputVariable} onstatuschange={statusChangeHandler}></lightning-flow>
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>

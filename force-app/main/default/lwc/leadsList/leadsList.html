@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-19-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Lead Details" icon-name="standard:lead">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <template lwc:if={leads.data}>
+                    <template for:each={leads.data} for:item="leadRec">
+                        <c-lead-items lead={leadRec} key={leadRec.Id} onselection={selectionHandler}></c-lead-items>
+                    </template>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <template lwc:if={selectedRecord}>
+                    <img src={selectedRecord.PhotoUrl} />
+                    <p><lightning-formatted-text value={selectedRecord.Name}></lightning-formatted-text></p>
+                    <p><lightning-formatted-phone value={selectedRecord.Phone}></lightning-formatted-phone></p>
+                    <p><lightning-formatted-email value={selectedRecord.Email}></lightning-formatted-email></p>
+                    <p><lightning-formatted-number value={selectedRecord.AnnualRevenue}
+                            format-style="decimal"></lightning-formatted-number></p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

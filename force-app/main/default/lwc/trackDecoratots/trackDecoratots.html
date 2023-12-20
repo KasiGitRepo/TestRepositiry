@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-07-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+  <!--
+  <lightning-card title="Track Decorator">
+    <div class="slds-p-around_smal">
+       <lightning-input name="firstName" label="First Name" onchange={handleInput}></lightning-input>
+       <lightning-input name="lastName" label="Last Name" onchange={handleInput}></lightning-input>
+        <p class="slds-p-around_small">
+           The Name of the user in UpperCase : {getName}
+        </p>
+    </div>
+  </lightning-card>  
+  -->
+  <lightning-card title="Track Decorator">
+    <p class="slds-p-left_small"> My Name : {myName.fname} {myName.lname}</p>
+    <p class="slds-p-left_small"> My Data : {myData}</p>
+    <div class="slds-p-around_small">
+      <lightning-button label="Change Text" onclick={changeHandler} variant="brand">
+      </lightning-button>
+    </div>
+  </lightning-card>
+</template>

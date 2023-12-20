@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <property name="apiName" type="String" required="true" default="Account"
+                label="Enter Object Api Name" />
+            <property name="objectLabel" type="String" default="Account" required="true"
+                label="Enter Object Label" />
+            <property name="iconName" type="String" required="true" default="standard:account"
+                label="Enter Icon Name"
+                description="Refer SLDS from more information on icons" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-26-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Filtering Contact Records" icon-name="standard:contact">
+        <div class="slds-p-around_x-small">
+            <lightning-input type="text" label="Filter" onkeyup={filterHandler} 
+                             class="slds-p-around_x-small">
+            </lightning-input>
+            <table>
+                <thead>
+                    <tr>
+                        <template for:each={headings} for:item="heading">
+                            <th key={heading}>{heading}</th>
+                        </template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={filterData} for:item="data">
+                        <tr key={data.Id}>
+                            <td>{data.Id}</td>
+                            <td>{data.Name}</td>
+                            <td>{data.Email}</td>
+                            <td>{data.Title}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

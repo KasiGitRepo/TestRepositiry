@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-21-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="LMS-Publisher Component" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <lightning-layout>
+                <lightning-layout-item size="6">
+                    <template lwc:if={contacts.data}>
+                        <template for:each={contacts.data} for:item="contact">
+                            <c-contact-items contact={contact} key={contact.id}
+                                onselection={selectionHandler}></c-contact-items>
+                        </template>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

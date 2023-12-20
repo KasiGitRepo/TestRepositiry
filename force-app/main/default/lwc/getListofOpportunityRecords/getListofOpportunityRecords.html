@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Opportunity List View">
+        <div class="slds-p-around_x-small">
+            <table class="slds-table slds-table-cell_buffer slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th>Opportunity Name</th>
+                        <th>StageName</th>
+                        <th>Closedate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={opportunities} for:item="opp">
+                        <tr key={opp.fields.Id.value}>
+                            <td>{opp.fields.Name.value}</td>
+                            <td>{opp.fields.StageName.value}</td>
+                            <td>{opp.fields.CloseDate.value}</td>
+                            <td>{opp.fields.Amount.value}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <div class="slds-p-around_small">
+                <lightning-button class="slds-p-around_x-small" label="Previous" variant="brand" onclick={handlePreviousPage}></lightning-button>
+                <lightning-button class="slds-p-around_x-small" label="Next" variant="brand" onclick={handleNextPage}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Custom Validation with Record Edit Form">
+        <lightning-record-edit-form object-api-name={objectName} onsubmit={submitHandler} onsuccess={successHandler}
+            onerror={errorHandler}>
+            <lightning-input type="text" label="Name" value={inputVal} onkeyup={handleInput}
+                class="slds-p-around_small">
+            </lightning-input>
+            <lightning-button type="submit" label="Create Opportunity" variant="brand" class="slds-p-around_small">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Fetch Object Metadata as Wire Adapter">
+        <div class="slds-p-around_x-small">
+            <div> <strong>Object Name:</strong>{objectName} </div>
+            <div> <strong>Default Record Type Id:</strong>{defaultRecordTypeId} </div>
+            <div> <strong>Theme Info iconUrl :</strong> {url}</div>
+            <div> <strong>Key Prefix :</strong>{keyPrefix}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Fetch Object Metadata as Wire Property">
+        <div class="slds-p-around_x-small">
+            <!-- Once the data is available then it will display (euns in asynchronous mode)-->
+            <template lwc:if={objectInfoData}>
+                <div> <strong>Object Name :</strong> {objectInfoData.data.apiName} </div>
+                <div> <strong>Default Record Type Id :</strong> {objectInfoData.data.defaultRecordTypeId}</div>
+                <div> <strong>Theme Info iconUrl :</strong> {objectInfoData.data.themeInfo.iconUrl}</div>
+                <div> <strong>Key Prefix : </strong>{objectInfoData.data.keyPrefix}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

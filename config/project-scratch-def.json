@@ -1,0 +1,10 @@
+{
+  "orgName": "DevOps Center",
+  "edition": "Enterprise",
+  "features": ["DevOpsCenter"],
+  "settings": {
+      "devHubSettings": {
+          "enableDevOpsCenterGA": true
+          }  
+      }  
+  }

@@ -1,0 +1,63 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 11-27-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-form-element">
+
+            <div class="slds-form-element__control">
+                <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                            role="none">
+                            <lightning-input type="search" label={objectLabel} placeholder={placeHolder}
+                                onchange={changeHandler} class="slds-var-p-left_small slds-var-p-right_small">
+                            </lightning-input>
+                            <lightning-icon icon-name={iconName} size="small" alternative-text={objectLabel}>
+                            </lightning-icon>
+                        </div>
+                        <tempate lwc:if={hasRecords}>
+                            <div id="listbox-id-2"
+                                class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+                                role="listbox" tabindex="0" aria-busy="false">
+                                <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                    <template for:each={resultData} for:item="output">
+                                        <li role="presentation" class="slds-listbox__item" key={output.Id}>
+                                            <div id="option280"
+                                                class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                                role="option">
+                                                <span class="slds-media__figure slds-listbox__option-icon">
+                                                    <!--
+                                                    <span class="slds-icon_container slds-icon-standard-account">
+                                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                            <use
+                                                                xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    -->
+                                                    <lightning-icon icon-name={iconName} size="small"
+                                                        alternative-text={objectLabel}>
+                                                    </lightning-icon>
+                                                </span>
+                                                <span class="slds-media__body">
+                                                    <span
+                                                        class="slds-listbox__option-text slds-listbox__option-text_entity"
+                                                        data-recid={output.Id}>{output.Name}</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </tempate>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

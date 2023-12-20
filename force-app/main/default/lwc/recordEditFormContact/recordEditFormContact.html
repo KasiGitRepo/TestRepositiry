@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Lightning Record View Form">
+        <lightning-record-edit-form object-api-name={objectName} record-id="0035j000017vt9HAAQ">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-input-field field-name={fields.firstNameField}></lightning-input-field>
+                    <lightning-input-field field-name={fields.lastNameField}></lightning-input-field>
+                    <lightning-input-field field-name={fields.PhoneField}></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-input-field field-name={fields.emailField}></lightning-input-field>
+                    <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

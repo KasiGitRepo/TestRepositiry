@@ -1,0 +1,62 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-15-2023
+  @last modified by  : Kasi Jangiti
+-->
+
+<!--
+     Steps to follow :
+     -----------------
+    1.Add lightning:messageChannel component to Aura Component.
+       <lightning:messageChannel 
+        type="CustomMessageChannel__c" 
+        aura:id="messageChannel" 
+        scope="APPLICATION"
+        onMessage="{!c.handleMessage}">
+    </lightning:messageChannel>
+
+    2.Specify a controller action that read the message argument to get the values in the payload/message.
+      // subscribe the published message
+       handleMessage : function(component, message) {
+       if(message != null && message.getParam("lmsDatapass") !=null){
+          //Set the published message to the attribute(variable) to display on UI
+          component.set("v.recieveMessage", message.getParam("lmsDatapass").value);
+        }
+      }
+
+    3.To publish a message find the referecne of the message channel and call the publish method by passing the payload
+       component.find("SampleMessageCHannel").publish(message)
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <!-- Store the input field value-->
+    <aura:attribute name="inputMessage" type="String" />
+
+    <!-- Store the published message(output)-->
+    <aura:attribute name="recieveMessage" type="String" />
+
+    <!--Message Channel to subscribe the message from publisher-->
+    <lightning:messageChannel type="CustomMessageChannel__c" aura:id="messageChannel" scope="APPLICATION"
+        onMessage="{!c.handleMessage}">
+    </lightning:messageChannel>
+
+    <lightning:card title="LMS Aura Component">
+
+        <!-- Input field to pass the message-->
+        <div class="slds-p-around_small">
+            <lightning:input type="text" label="Publish Message" value="{!v.inputMessage}" onkeyup="{!c.handleInput}" />
+        </div>
+
+        <!-- Button to publish the message-->
+        <div class="slds-p-around_small">
+            <lightning:button label="Publish" variant="brand" onclick="{!c.publishHandler}" />
+        </div>
+
+        <!-- Display published message on UI-->
+        <div class="slds-p-around_small">
+            Published Message : <strong> {!v.recieveMessage}</strong>
+        </div>
+    </lightning:card>
+</aura:component>

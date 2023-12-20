@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Parent Component" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <lightning-datatable key-field="Id" data={contactData} columns={columns}>
+            </lightning-datatable>
+        </div>
+
+        <div class="slds-var-p-around_small">
+            <c-c22p-child onpassdata={inputDataHandler}></c-c22p-child>
+        </div>
+    </lightning-card>
+</template>

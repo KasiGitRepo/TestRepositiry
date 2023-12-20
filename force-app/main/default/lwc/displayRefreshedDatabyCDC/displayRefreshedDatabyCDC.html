@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-05-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <template lwc:if={isDisplayMessage}>
+        <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+            <span class="slds-assistive-text">warning</span>
+            <lightning-icon icon-name="utility:warning" title="Warning" alternative-text="Warning">
+            </lightning-icon>
+            <h2>Currently you have outdated data. Please refresh to get updated data.</h2>
+            <div class="slds-notify__close">
+                <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh Page" title="Refresh Page"
+                    onclick={refreshHandler}>
+                </lightning-button-icon>
+            </div>
+        </div>
+    </template>
+</template>

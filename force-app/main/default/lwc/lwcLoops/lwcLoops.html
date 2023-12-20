@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Simple For Loop" icon-name="custom:custom14">
+        <div class="slds-p-around_x-small">
+            <template for:each={companies} for:item="company">
+                <p key={company}> {company}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="For loop with Complex data" icon-name="custom:custom14">
+        <div class=slds-p-around_x-small>
+            <template for:each={contactList} for:item="contact">
+                <p key={contact.id}> {contact.firstName} {contact.lastName} {contact.company}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Iterator with complex Data" icon-name="custom:custom14">
+        <div class="slds-p-around_small">
+            <template iterator:it={contactList}>
+                <div key={it.value.id}>
+                    <div lwc:if={it.first} class="border-top"></div>
+                    <div> {it.value.firstName} {it.value.lastName} {it.value.company}</div>
+                    <div lwc:if={it.last} class="border-bottom"></div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

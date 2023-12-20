@@ -1,0 +1,11 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <!-- Call the child(LWC) component -->
+    <c:generateMessageToAura onname="{!c.handleName}"></c:generateMessageToAura>
+</aura:component>

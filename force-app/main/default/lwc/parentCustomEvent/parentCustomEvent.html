@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-19-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Child to Parent Communication">
+        <div class="slds-var-p-around_small">
+            <template lwc:if={displayMessage}>
+                <p class="slds-p-var-around_small"> Welcome to Lightning Web Component Series of videos with Ankit Jain
+                </p>
+            </template>
+            <p class="slds-var-p-around_small"> Name : {name}</p>
+            <p class="slds-var-p-around_small"> Age : {age}</p>
+            <c-child-custom-event onsampleevent={handleEventfromChild}></c-child-custom-event>
+        </div>
+    </lightning-card>
+</template>

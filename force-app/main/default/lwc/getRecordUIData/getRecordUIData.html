@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-22-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Record UI data">
+        <div class="slds-p-around_x-small">
+            <template for:each={formFields} for:item="field">
+                <div key={field.label}>
+                    <p class="slds-text-color_destructive"><strong>{field.label} : </strong></p>
+                    <p class="slds-text-color_success"><strong>{field.value}</strong></p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

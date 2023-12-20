@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Parent Component" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <lightning-button label="Display Message" variant="brand" onclick={displayHandler}></lightning-button>
+        </div>
+
+        <div class="slds-var-p-around_small">
+            <c-child-comp employee={empDetails} message={displayMessage}></c-child-comp>
+        </div>
+    </lightning-card>
+</template>

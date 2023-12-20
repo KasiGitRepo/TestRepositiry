@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-05-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Child Component">
+        <div class="slds-p-around_small">
+            <lightning-carousel disable-auto-scroll>
+                <template for:each={childDeatils} for:item="item">
+                    <lightning-carousel-image key={item.description} src={item.src} header={item.header}
+                        description={item.description}>
+                    </lightning-carousel-image>
+                </template>
+            </lightning-carousel>
+        </div>
+    </lightning-card>
+</template>

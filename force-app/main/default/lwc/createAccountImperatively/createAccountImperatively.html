@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Create Account and Opportunity">
+        <div class="slds-p-around_x-small">
+            <lightning-input class="slds-p-around_x-small" label="Name" value={accName}
+                onchange={handleName}></lightning-input>
+            <lightning-input class="slds-p-around_x-small" type="number" label="Annual Revenue" value={accAnnRevenue}
+                onchange={handleRevenue}></lightning-input>
+            <lightning-input class="slds-p-around_x-small" label="Rating" value={accRating}
+                onchange={handleRating}></lightning-input>
+            <lightning-input class="slds-p-around_x-small" label="Industry" value={accIndustry}
+                onchange={handleIndustry}></lightning-input>
+            <lightning-button class="slds-p-around_x-small" label="Create Account" variant="brand"
+                onclick={createHandler}>
+
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

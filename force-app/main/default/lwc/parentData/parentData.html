@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Passing Data to Child from Parent" icon-name="standard:opportunity">
+        <div class="slds-var-p-around_small">
+            <template lwc:if={opps.data}>
+                <c-child-display opp-rec={opps.data}></c-child-display>
+            </template>
+        </div>
+    </lightning-card>
+</template>

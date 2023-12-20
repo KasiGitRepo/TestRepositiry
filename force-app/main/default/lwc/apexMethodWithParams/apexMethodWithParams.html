@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-24-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Account data with Params">
+        <div class="slds-p-around_x-small">
+            <lightning-combobox name="Type" label="Type" value={selectedType} options={accountTypeValues}
+                onchange={handleChange}>
+            </lightning-combobox>
+            <template lwc:if={accountTypes.data}>
+                <template for:each={accountTypes.data} for:item="account">
+                    <div class="slds-box slds-box_x-small" key={account.Id}>
+                        <div> Account Name : {account.Name}</div>
+                        <div> Account Type : {account.Type}</div>
+                        <div> Account Industry : {account.Industry}</div>
+                        <div> Account Phone : {account.Phone}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-08-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Public Property Child Component">
+        <div class="slds-p-around_x-small">
+            <p class="slds-p-left_small">
+                <lightning-formatted-text value={getData}></lightning-formatted-text>
+            </p>
+            <p class="slds-p-left_small">
+                <lightning-formatted-text value={certUpdate.certificate}></lightning-formatted-text>
+            </p>
+            <p>
+                Boolean Value : {isBooleanValue}
+            </p>
+        </div>
+    </lightning-card>
+</template>

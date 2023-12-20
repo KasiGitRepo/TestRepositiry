@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-14-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <!--Creation of Record-->
+    <lightning-card title="Creation of Opportunity Record Form">
+        <div class="slds-p-around_small">
+            <lightning-record-form object-api-name={object} fields={fields} onsuccess={successHandler}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    
+    <!--Display record in edit mode-->
+    <lightning-card title="Opportunity Record Form Edit">
+        <div class="slds-p-around_small">
+            <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} mode="edit">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <!--Display record in Readonly mode-->
+    <lightning-card title="Opportunity Record Form Readonly">
+        <div class="slds-p-around_small">
+            <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} mode="readonly">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <!--Display all the fields-->
+    <lightning-card title="Opportunity Record Form Full Layout">
+        <div class="slds-p-around_small">
+            <lightning-record-form record-id={recordId} object-api-name={objectApiName} mode="view" layout-type="Full" columns="2">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

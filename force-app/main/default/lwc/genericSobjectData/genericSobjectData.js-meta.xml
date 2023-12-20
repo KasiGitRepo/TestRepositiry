@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <property name="apiName" type="String" default="Account" required="true" />
+            <property name="objectLabel" type="String" default="Account" required="true" />
+            <property name="iconName" type="String" default="standard:account" required="true"
+                description="Please visit SLDS for more information about CSS" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

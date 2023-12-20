@@ -1,0 +1,57 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 10-08-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Simple Calculator">
+        General way to Calculate
+        <!--
+        <div class="slds-p-around_small">
+            <lightning-input label="Enter Number 1" onchange={handleNumberOne}
+                placeholder="Enter Number One"></lightning-input>
+            <lightning-input label="Enter Number 2" onchange={handleNumberTwo}
+                placeholder="Enter Number Two"></lightning-input>
+        </div>
+        <div>
+            <lightning-button label="Add" variant="brand" onclick={addHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Sub" variant="brand" onclick={subHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Mul" variant="brand" onclick={mulHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Div" variant="brand" onclick={divHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Clear" variant="brand" onclick={clearHandler}
+                class="slds-p-around_x-small"></lightning-button>
+        </div>
+        <div class="slds-p-around_x-small">
+            Output : {result}
+        </div>
+        -->
+        Best practice
+        <div class="slds-p-around_small">
+            <lightning-input label="Enter Number 1" onchange={handleInput} name="number1"
+                placeholder="Enter Number One"></lightning-input>
+            <lightning-input label="Enter Number 2" onchange={handleInput} name="number2"
+                placeholder="Enter Number Two"></lightning-input>
+        </div>
+        <div>
+            <lightning-button label="Add" variant="brand" onclick={calculateHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Sub" variant="brand" onclick={calculateHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Mul" variant="brand" onclick={calculateHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Div" variant="brand" onclick={calculateHandler}
+                class="slds-p-around_x-small"></lightning-button>
+            <lightning-button label="Clear" variant="brand" onclick={calculateHandler}
+                class="slds-p-around_x-small"></lightning-button>
+        </div>
+        <div class="slds-p-around_x-small">
+            Output : {result}
+        </div>
+    </lightning-card>
+</template>

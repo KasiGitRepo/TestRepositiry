@@ -1,0 +1,88 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-15-2023
+  @last modified by  : Kasi Jangiti
+-->
+<apex:page lightningStylesheets="true">
+
+ <!--
+     1.Get the message channel reference using $MessageChannel Global variable
+         let SAMPLEMC = "{!$MessageChannel.SampleMessageChanne__c}"
+     2.Publish Message
+         sforce.one.publish(SAMPLEMC, payload/message)
+     3.Subscribe a Message
+         subscriptionToMC = sforce.one.subscribe(SAMPLEMC, handleMsg(), {scope:"APPLICATION"})
+     4.Unsubscribe a Message
+         sforce.one.unsubscribe(subscriptionToMC)
+ -->
+    <apex:slds/>
+    <div class="slds-scope">
+        <div class="slds-p-around_small">
+            <label>Enter Publish Message</label>
+            <input type="text" class="slds-input" id="messageChannel" />
+        </div>
+
+        <!--Create three buttons from pUblish,Subscribe and Unsubscribe-->
+        <div class="slds-p-around_small">
+            <button class="slds-button slds-button_neutral" onclick="publishHandler()">Publish</button>
+            <button class="slds-button slds-button_neutral" onclick="subscriberHandler()">Subscribe</button>
+            <button class="slds-button slds-button_neutral" onclick="unsubscriberHandler()">Unsubscribe</button>
+        </div>
+        <p>Message Received</p>
+        <div id="receiveMessage"></div>
+    </div>
+
+     <!-- Javscript Code-->
+    <script>
+        // Call/import the message channel into Js file
+        let MSGCHNL = "{!$MessageChannel.CustomMessageChannel__c}"
+        let subscriptionToMC
+
+        //publish handler function
+        function publishHandler() {
+
+            // Get the input field value by doucment.getElementById
+            let msg = document.getElementById("messageChannel").value
+
+            //Pass the input field value to the message property
+            const message = {
+                lmsDatapass: {
+                    value: msg
+                }
+            }
+
+            // Call the publish method
+            sforce.one.publish(MSGCHNL, message)
+        }
+
+         // Subscribe handler function
+        function subscriberHandler() {
+            //Check if it is not subscribed, Click on button to subscribe
+            if (!subscriptionToMC) {
+
+                //Call the subscribe method
+                subscriptionToMC = sforce.one.subscribe(MSGCHNL, msgHandler, { scope: "APPLICATION" })
+            }
+        }
+
+        //unsubscribe handler
+        function unsubscriberHandler() {
+
+            if (subscriptionToMC) {
+                //Call the unsubscribe method to deactivate the subscription
+                sforce.one.unsubscribe(subscriptionToMC)
+                subscriptionToMC = null
+            }
+        }
+
+        // Handle the message and display it on UI
+       function msgHandler(message){
+            let receiveMessage = document.getElementById("receiveMessage")
+            receiveMessage.innerHTML = message && message.lmsDatapass ? message.lmsDatapass.value : "No data passed from publish";
+        }
+        
+    </script>
+
+</apex:page>

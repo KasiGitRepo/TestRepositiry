@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Get Opps List by Imperative">
+        <div class="slds-p-around_x-small">
+            <lightning-button class="slds-p-around_x-small" label="Display Opps" variant="brand" onclick={handleOpps}>
+            </lightning-button>
+            <template lwc:if={opps}>
+                <template for:each={opps} for:item="opp">
+                    <div key={opp.Id} class="slds-p-around_x-small slds-box slds-box_x-small">
+                        <p>Account Name : {opp.Account.Name}</p>
+                        <p>Opportunity Name : {opp.Name}</p>
+                        <p>Opportunity StageName : {opp.StageName}</p>
+                        <p>Opportunity Close Date : {opp.CloseDate}</p>
+                        <p>Opportunity Type : {opp.Type}</p>
+                        <p>Opportunity Amount : {opp.Amount}</p> 
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

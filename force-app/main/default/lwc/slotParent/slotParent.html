@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-12-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Slot Demo">
+        <div class="slds-p-around_x-small">
+          <c-slot-child>
+            <p class="slds-text-color_success" slot="name">My Name is Lightning Web Component</p>
+            <p class="slds-text-color_error" slot="age">My Age is 4years</p>
+            <p class="slds-text-color_success" slot="develop">Developed by Salesforce</p>
+            <p class="slds-text-color_error" slot="footer"><b>I am a Footer</b></p>
+          </c-slot-child>
+        </div>
+
+        <div class="slds-p-around_x-small">
+            <c-slot-child>
+              <p class="slds-text-color_success" slot="name">My Name is Lightning Web Component</p>
+              <p class="slds-text-color_error" slot="age">My Age is 4years</p>
+              <p class="slds-text-color_success" slot="develop">Developed by Salesforce</p>
+            <!-- <p class="slds-text-color_error" slot="footer"><b>I am a Footer</b></p>-->  
+            </c-slot-child>
+          </div>
+    </lightning-card>
+</template>

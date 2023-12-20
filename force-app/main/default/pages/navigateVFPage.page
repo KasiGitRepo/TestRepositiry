@@ -1,0 +1,13 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-16-2023
+  @last modified by  : Kasi Jangiti
+-->
+<apex:page>
+    <!-- Begin Default Content REMOVE THIS -->
+    <h1>Congratulations</h1>
+    <p>You were navigated to VisualForce Page from LWC through Navigation Service</p>
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>

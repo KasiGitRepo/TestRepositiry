@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-05-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+
+    <!-- Example of Passing Complex Data-->
+    <c-p2c-child child-deatils={childData}></c-p2c-child>
+
+    <!-- Example of passing data by an event-->
+
+    <lightning-card title="Data passing by an event">
+        <lightning-input type="number" label="Percentage" onkeyup={changeHandler}
+        class="slds-p-around_small" value={percentage}></lightning-input>
+        <c-p2c-progrees-bar progress-value={percentage}></c-p2c-progrees-bar>
+
+        <lightning-button label="Reset Slider" variant="brand" onclick={handleClick}>
+        </lightning-button>
+    </lightning-card>
+
+    <c-p2c-slider-component></c-p2c-slider-component>
+</template>

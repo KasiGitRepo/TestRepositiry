@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-02-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="For:each loop">
+        <div class="slds-m-around_small">
+            <template for:each={states} for:item="state">
+                <ul class="slds-has-dividers_around-space" key={state}>
+                    <li class="slds-item"> State Name : <strong> {state} </strong></li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Iterator loop">
+        <div class="slds-m-around_small">
+            <template iterator:city={citiesList}>
+                <div key={city.value.id}>
+                <template lwc:if={city.first}>
+                    <div class="slds-box slds-theme_shade">
+                      <strong> List of states and cities are mentioned below</strong>
+                    </div>                   
+                </template>
+              
+                <ul class="slds-has-dividers_around-space">
+                    <li class="slds-item"><strong> {city.value.state} </strong> {city.value.name}</li>
+                </ul>
+
+                <template lwc:if={city.last}>
+                    <div class="slds-box slds-theme_shade"> Thanks for viewing the list</div>
+                </template>
+              </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

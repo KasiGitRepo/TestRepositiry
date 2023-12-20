@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-13-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <lightning-card title="Creation of Lightning Record Form">
+        <div class="slds-p-around_small">
+           <lightning-record-form
+             object-api-name={object}
+             fields={fields}
+             record-type-id={accountRecordTypeId}
+           >
+           </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Read-only of Lightning Record Form">
+        <div class="slds-p-around_small">
+           <lightning-record-form
+             record-id={recordId}
+             object-api-name={object}
+             fields={fields}         
+             mode="view"
+             record-type-id={accountRecordTypeId}
+           >
+           </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Edit of Lightning Record Form">
+        <div class="slds-p-around_small">
+           <lightning-record-form
+             object-api-name={object}
+             fields={fields}
+             record-id={recordId}
+             mode="readonly"
+             record-type-id={accountRecordTypeId}
+           >
+           </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    
+    <lightning-card title="Layout of Lightning Record Form">
+        <div class="slds-p-around_small">
+           <lightning-record-form
+             object-api-name={object}
+             layout-type="Full"
+             record-id={recordId}
+             mode="edit"
+             record-type-id={accountRecordTypeId}
+           >
+           </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

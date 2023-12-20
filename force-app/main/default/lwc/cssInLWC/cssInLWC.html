@@ -1,0 +1,171 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 08-03-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+
+    <!-- Inline Style-->
+    <lightning-card title="CSS in LWC">
+        <div class="slds-p-around_small">
+            <div style="color: red; font-size:20px; border:solid blue 3px;">Hey I was applied Inline Styling</div>
+        </div>
+    </lightning-card>
+
+    <!-- External Style-->
+    <lightning-card title="External Styling">
+        <p> I am from paragraph tag</p>
+        <div class="name"> I am from div tag</div>
+    </lightning-card>
+
+    <lightning-card title="Salesforce Lightning Design System">
+        <!--General Box-->
+        <div class="slds-box">
+            <p>This is a small box.</p>
+        </div>
+
+        <!--Small box-->
+        <div class="slds-box slds-box_x-small">
+            <p>This is an extra-small box.</p>
+        </div>
+
+        <!--float right-->
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <p>I'm floooaaaating</p>
+            </div>
+        </div>
+
+        <!--layout-->
+        <div>
+            <div class="slds-card slds-has-bottom-magnet">
+                <div class="slds-p-around_medium">My Component</div>
+            </div>
+            <div class="slds-card slds-has-top-magnet">
+                <div class="slds-p-around_medium">My Component</div>
+            </div>
+        </div>
+
+        <!--Text Upper case-->
+        <div class="slds-text-title_caps">The quick brown fox jumps over the lazy dog.</div>
+
+        <!--Align right-->
+        <div class="slds-text-align_right">The quick brown fox jumps over the lazy dog.</div>
+
+        <!-- Color inverse-->
+        <div class="demo-only" style="padding:0.5rem;background:#16325c">
+            <div class="slds-text-color_inverse">The quick brown fox jumps over the lazy dog.</div>
+        </div>
+        <!-- Theme -->
+        <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+            <p>This theme has the
+                <strong>alert texture</strong> added to the default theme and has a
+                <a href="#">link</a>.
+            </p>
+        </div>
+
+        <!-- Vertical List-->
+        <ol class="slds-list_ordered">
+            <li>Basic ordered list</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ol>
+
+        <!--Nested vertical list-->
+        <ul class="slds-m-around_small">
+            <li>Vertical List with nested vertical lists</li>
+            <li>List Item</li>
+            <li>
+                <ul class="slds-is-nested">
+                    <li>Nested Vertical List</li>
+                    <li>List Item</li>
+                    <li>
+                        <ul class="slds-is-nested">
+                            <li>Nested Vertical List</li>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Visibility-->
+        <div class="slds-show">I am hidden</div>
+
+        <!-- Opacity/Transparency-->
+        <div class="slds-transition-hide">I have zero opacity</div>
+        <div class="slds-transition-show">I have 100% opacity</div>
+
+        <!-- Grid -->
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                Column1
+            </div>
+            <div class="slds-col">
+                Column2
+            </div>
+            <div class="slds-col">
+                Column3
+            </div>
+        </div>
+
+        <!-- Grid merging-->
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_2-of-3">
+                <span>1</span>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <span>2</span>
+            </div>
+        </div>
+
+        <!-- -->
+        <div class="slds-grid slds-gutters_direct">
+            <div class="slds-col">
+                <span>1</span>
+            </div>
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <span>Nested Column 1</span>
+                </div>
+                <div class="slds-col">
+                    <span>Nested Column 2</span>
+                </div>
+            </div>
+            <div class="slds-col">
+                <span>3</span>
+            </div>
+        </div>
+
+        <!-- Description List -->
+        <div class="slds-region_narrow" style="width:360px">
+            <dl class="slds-dl_inline">
+                <dt class="slds-dl_inline__label">First Label:</dt>
+                <dd class="slds-dl_inline__detail">Description for first label</dd>
+                <dt class="slds-dl_inline__label">Second Label:</dt>
+                <dd class="slds-dl_inline__detail">Second description</dd>
+            </dl>
+        </div> <br />
+
+        <!-- Border -->
+        <div class="slds-border_top">This should have a bottom border.</div>
+
+        <!--Alignement-->
+        <div class="slds-align_absolute-center" style="height:3rem">This content will be positioned in the absolute
+            center of its container</div>
+        <br />
+        <!-- Buttons -->
+        <div class="slds-p-around_small">
+            <button class="slds-button">Button</button>
+            <button class="slds-button slds-button_neutral slds-p-around_small">Neutral Button</button>
+            <button class="slds-button slds-button_brand slds-p-around_small">Brand Button</button>
+            <button class="slds-button slds-button_outline-brand slds-p-around_small">Outline Brand Button</button>
+            <button class="slds-button slds-button_destructive slds-p-around_small">Destructive Button</button>
+            <button class="slds-button slds-button_text-destructive slds-p-around_small">Text Destructive Button</button>
+            <button class="slds-button slds-button_success slds-p-around_small">Success Button</button>
+        </div>
+    </lightning-card>
+</template>
