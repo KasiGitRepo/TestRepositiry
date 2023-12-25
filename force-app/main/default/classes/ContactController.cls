@@ -2,7 +2,7 @@
  * @description       :
  * @author            : Kasi Jangiti
  * @group             :
- * @last modified on  : 12-15-2023
+ * @last modified on  : 12-24-2023
  * @last modified by  : Kasi Jangiti
  **/
 public with sharing class ContactController {
@@ -44,4 +44,6 @@ public with sharing class ContactController {
 	public static List<Contact> getContactListForDataTable() {
 		return [SELECT Id, Name, Phone, Email, Title, Rank__c, Picture__c, AccountId, Account.Name FROM Contact WHERE AccountId != null WITH USER_MODE LIMIT 10];
 	}
+	
+	
 }

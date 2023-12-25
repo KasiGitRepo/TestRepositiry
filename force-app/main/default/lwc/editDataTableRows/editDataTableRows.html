@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Kasi Jangiti
+  @group             : 
+  @last modified on  : 12-25-2023
+  @last modified by  : Kasi Jangiti
+-->
+<template>
+    <template lwc:if={contactData}>
+        <lightning-card title="Data Table with Inline Edit" icon-name="custom:custom14">
+            <lightning-datatable key-field="Id" data={contactData} columns={columns} onsave={saveHandler}
+                draft-values={draftValues}>
+            </lightning-datatable>
+        </lightning-card>
+    </template>
+</template>

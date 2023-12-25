@@ -14,5 +14,6 @@
     "configurations": [],
     "compounds": []
   },
-  "SFDoc.IncludParameterTypeInMethodHeader": true
+  "SFDoc.IncludParameterTypeInMethodHeader": true,
+  "salesforcedx-vscode-lwc.preview.logLevel": "info"
 }
