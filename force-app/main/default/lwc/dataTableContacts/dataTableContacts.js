@@ -2,12 +2,14 @@
  * @description       : 
  * @author            : Kasi Jangiti
  * @group             : 
- * @last modified on  : 12-15-2023
+ * @last modified on  : 12-25-2023
  * @last modified by  : Kasi Jangiti
 **/
 import { LightningElement, wire } from 'lwc';
 import getContactListForDataTable from '@salesforce/apex/ContactController.getContactListForDataTable';
 const columns = [
+
+    // Data type is badge
     {
         label: "Name", type: "contactNameType",
         typeAttributes: {
@@ -17,6 +19,7 @@ const columns = [
         }
     },
 
+    //Account Name
     {
         label: "Account Name", fieldName: "accountLink", type: "url", // Display Account Name
         typeAttributes: {
@@ -31,6 +34,7 @@ const columns = [
 
     { label: "Email", fieldName: "Email", type: "email" },
 
+    //Title with color
     {
         label: "Title", fieldName: "Title",
         cellAttributes: { // Add color to the text
@@ -38,6 +42,7 @@ const columns = [
         }
     },
 
+    //Rank with Icon(Data type as icon)
     {
         label: "Rank", fieldName: "Rank__c", type: "contactRankType",
         typeAttributes: {
@@ -47,6 +52,7 @@ const columns = [
         }
     },
 
+    //Data type as Image
     {
         label: "Picture", type: "contactImageType",
         typeAttributes: {
@@ -59,6 +65,7 @@ const columns = [
         }
     }
 ];
+
 export default class DataTableContacts extends LightningElement {
 
     contacts = [];
@@ -68,11 +75,12 @@ export default class DataTableContacts extends LightningElement {
     wiredContacts({ data, error }) {
         if (data) {
             this.contacts = data.map((record) => {
-                let accountLink = "/" + record.AccountId; // Add AccountId in the url
+                let accountLink = "/" + record.AccountId; // Make the Account Name as Hyperlink
                 let accountName = record.Account.Name; // Display Account Name in the Table
                 let titleColor = "slds-text-color_success"; // Add color to the text
                 let rankIcon = record.Rank__c > 5 ? "utility:ribbon" : "";
                 return {
+                    //Return the values from the map
                     ...record,
                     accountLink: accountLink,
                     accountName: accountName,

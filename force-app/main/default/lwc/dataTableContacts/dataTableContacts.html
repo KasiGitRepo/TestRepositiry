@@ -2,12 +2,13 @@
   @description       : 
   @author            : Kasi Jangiti
   @group             : 
-  @last modified on  : 12-15-2023
+  @last modified on  : 12-25-2023
   @last modified by  : Kasi Jangiti
 -->
 <template>
   <lightning-card title="Data Table Features" icon-name="custom:custom14">
-    <c-custom-data-type key-field="id" data={contacts} columns={columns}>
+    <!-- We have to invoke the child(extended) component instead of Data table-->
+    <c-custom-data-type key-field="Id" data={contacts} columns={columns}>
     </c-custom-data-type>
   </lightning-card>
 </template>
